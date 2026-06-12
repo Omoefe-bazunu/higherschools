@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ─────────────────────────────────────────
+       LIGHT MODE (Deep Purple & Vibrant Orange)
+       ───────────────────────────────────────── */
+    /* Slate-50 Background */
+    --background: 248 250 252;
+    /* Slate-900 Dark Slate Text */
+    --foreground: 15 23 42;
+
+    /* Pure White for Structural Elements */
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    /* Primary: Deep Purple (#4C1D95) */
+    --primary: 76 29 149;
+    --primary-foreground: 255 255 255;
+
+    /* Secondary: Orange-500 (#F97316) */
+    --secondary: 249 115 22;
+    --secondary-foreground: 255 255 255;
+
+    /* Muted elements */
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+
+    /* Accent & Borders */
+    --accent: 124 58 237;
+    --accent-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 76 29 149;
+
+    --radius: 0.75rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* ─────────────────────────────────────────
+         DARK MODE
+         ───────────────────────────────────────── */
+      /* Slate-950 Deep Dark Background */
+      --background: 2 6 23;
+      /* Slate-100 Off-White text */
+      --foreground: 241 245 249;
+
+      /* Slate-900 Elements */
+      --card: 15 23 42;
+      --card-foreground: 241 245 249;
+
+      /* Soft Lightened Purple for dark context readability */
+      --primary: 124 58 237;
+      --primary-foreground: 255 255 255;
+
+      /* Orange-500 persists, text changes if needed for optimal contrast */
+      --secondary: 249 115 22;
+      --secondary-foreground: 255 255 255;
+
+      --muted: 30 41 59;
+      --muted-foreground: 148 163 184;
+
+      --border: 30 41 59;
+      --input: 30 41 59;
+      --ring: 124 58 237;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Component Classes from your Specification Guidelines */
+@layer components {
+  /* Brand Primary CTA (Purple) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground
+           px-7 py-3.5 rounded-xl font-sans font-semibold text-sm
+           hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
+           transition-all duration-200 active:scale-95 no-underline;
+  }
+
+  /* Brand Secondary CTA (Orange-500) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground
+           px-7 py-3.5 rounded-xl font-sans font-semibold text-sm
+           hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/25
+           transition-all duration-200 active:scale-95 no-underline;
+  }
+
+  /* Structural Cards */
+  .flat-card {
+    @apply bg-card border border-border shadow-sm rounded-xl overflow-hidden transition-all duration-300;
+  }
+
+  /* Minimal Scrollbar utility for dashboards */
+  .minimal-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .minimal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .minimal-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  .minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+}
