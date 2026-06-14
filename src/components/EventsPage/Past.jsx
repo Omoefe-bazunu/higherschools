@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Award, Sparkles, Users2 } from "lucide-react";
+import { Award, Settings2Icon, Users2 } from "lucide-react";
 
 const recaps = [
   {
@@ -10,7 +10,7 @@ const recaps = [
     summary:
       "Three of our senior teams built functional white-label SaaS invoice tool models designed to automate small business cash flows.",
     metric: "12 Projects Built",
-    icon: <Sparkles size={16} />,
+    icon: <Settings2Icon size={16} />,
     image: "/events/pastevent1.jpg",
   },
   {

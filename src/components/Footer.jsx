@@ -6,12 +6,13 @@ export default function Footer() {
   const exploreLinks = [
     { name: "Admissions", href: "/admissions" },
     { name: "Innovations & Awards", href: "/innovations" },
-    { name: "Live Stream", href: "/live-stream" },
+    { name: "Gallery", href: "/gallery" },
+    // { name: "Live Stream", href: "/live-stream" },
   ];
 
   const legalLinks = [
-    { name: "Privacy Policy", href: "/privacy-policy" },
-    { name: "Terms & Conditions", href: "/terms-conditions" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms & Conditions", href: "/terms" },
   ];
 
   return (

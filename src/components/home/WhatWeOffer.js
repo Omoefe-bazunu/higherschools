@@ -136,6 +136,7 @@ const WhatWeOffer = () => {
             <button
               key={index}
               onClick={() => setCurrentStep(index)}
+              suppressHydrationWarning
               className={`transition-all duration-300 rounded-full ${
                 currentStep === index
                   ? "w-8 h-2 bg-white"

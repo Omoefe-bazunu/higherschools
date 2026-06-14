@@ -1,6 +1,7 @@
 import EventsHeader from "@/components/EventsPage/Hero";
 import EventsGrid from "@/components/EventsPage/Grid";
 import PastHighlights from "@/components/EventsPage/Past";
+import ActiveEvent from "@/components/EventsPage/Active";
 
 export const metadata = {
   title: "Campus Events & Calendars | HigherSchools",
@@ -13,6 +14,7 @@ export default function EventsPage() {
     <div className="w-full bg-background min-h-screen flex flex-col justify-start">
       <main className="w-full flex flex-col">
         <EventsHeader />
+        <ActiveEvent />
         <EventsGrid />
         <PastHighlights />
       </main>

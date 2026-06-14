@@ -73,6 +73,7 @@ export default function FaqSection() {
                   onClick={() => toggleFaq(index)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-slate-50/50 dark:hover:bg-zinc-900/40 transition-colors"
                   aria-expanded={isOpen}
+                  suppressHydrationWarning
                 >
                   <span className="font-heading text-base md:text-lg font-bold text-slate-800 dark:text-zinc-100 group-hover:text-primary">
                     {faq.question}

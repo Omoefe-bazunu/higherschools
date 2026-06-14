@@ -6,7 +6,7 @@ export default function AboutSection() {
       title: "Center of Learning",
       description:
         "A warm space where passionate teachers guide students to discover their talents and love learning every single day.",
-      imageClass: "bg-[url('/ABT1.jpg')]",
+      imageClass: "bg-[url('/home/ABT1.jpg')]",
       icon: BookOpen,
       accent: "from-primary to-primary/60",
       glow: "hover:shadow-primary/20",
@@ -16,7 +16,7 @@ export default function AboutSection() {
       title: "Innovation & Growth",
       description:
         "We inspire bright minds to build new things, solve real problems, and grow into bold, creative global leaders.",
-      imageClass: "bg-[url('/ABT2.jpg')]",
+      imageClass: "bg-[url('/home/ABT2.jpg')]",
       icon: Lightbulb,
       accent: "from-secondary to-secondary/60",
       glow: "hover:shadow-secondary/20",
@@ -26,7 +26,7 @@ export default function AboutSection() {
       title: "Socialization & Impact",
       description:
         "Our students connect deeply, build lifelong friendships, and learn how to make a lasting, positive difference in the world.",
-      imageClass: "bg-[url('/ABT3.jpg')]",
+      imageClass: "bg-[url('/home/ABT3.jpg')]",
       icon: Users,
       accent: "from-primary to-secondary",
       glow: "hover:shadow-primary/20",

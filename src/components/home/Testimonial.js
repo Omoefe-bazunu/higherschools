@@ -114,15 +114,17 @@ export default function TestimonialsSection() {
           <div className="flex items-center gap-4">
             <button
               onClick={handlePrev}
-              className="p-3 rounded-full bg-slate-100 dark:bg-zinc-900 hover:bg-primary hover:text-white text-slate-700 dark:text-zinc-300 transition-colors border border-slate-200/40 dark:border-zinc-800"
+              className="p-3 rounded-full bg-slate-100 ..."
               aria-label="Previous Testimonial"
+              suppressHydrationWarning
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={handleNext}
-              className="p-3 rounded-full bg-slate-100 dark:bg-zinc-900 hover:bg-primary hover:text-white text-slate-700 dark:text-zinc-300 transition-colors border border-slate-200/40 dark:border-zinc-800"
+              className="p-3 rounded-full bg-slate-100 ..."
               aria-label="Next Testimonial"
+              suppressHydrationWarning
             >
               <ChevronRight size={20} />
             </button>
@@ -134,12 +136,9 @@ export default function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`transition-all duration-300 rounded-full h-2 ${
-                  activeIndex === index
-                    ? "w-8 bg-primary"
-                    : "w-2 bg-slate-200 dark:bg-zinc-800 hover:bg-slate-300"
-                }`}
+                className={`transition-all ...`}
                 aria-label={`Go to slide ${index + 1}`}
+                suppressHydrationWarning // add here
               />
             ))}
           </div>

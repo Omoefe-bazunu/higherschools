@@ -1,21 +1,18 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 
-export default function EventHeader() {
+export default function AdmissionHero({ title, subtitle }) {
   return (
-    <section className="relative w-full h-[45vh] min-h-[320px] flex flex-col items-center justify-center text-center overflow-hidden pt-16">
+    <section className="relative w-full h-[45vh] min-h-[320px] flex flex-col items-center justify-center text-center overflow-hidden pt-16 bg-slate-900">
       {/* Immersive Background Image Layer */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/events/eventshero.jpg')`, // Save your generated asset with this filename
-        }}
-      >
-        {/* Deep Semi-Transparent Dark Overlay for Perfect Text Contrast */}
-        <div className="absolute inset-0 bg-slate-950/75 dark:bg-slate-950/85" />
-      </div>
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: `url('/admissions-hero.jpg')` }}
+      />
+      <div className="absolute inset-0 bg-slate-950/70 z-0" />
 
       {/* Centered Content Block */}
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center gap-4 text-white">
@@ -25,24 +22,20 @@ export default function EventHeader() {
             href="/"
             className="flex items-center gap-1.5 hover:text-secondary transition-colors"
           >
-            <Home size={14} />
-            <span>Home</span>
+            <Home size={14} /> <span>Home</span>
           </Link>
-
           <ChevronRight size={14} className="text-white/30 shrink-0" />
-
-          <span className="text-white font-semibold">School Events</span>
+          <span className="text-white font-semibold">Admissions</span>
         </nav>
 
-        {/* Impactful Centered Title Header */}
+        {/* Impactful Title Header */}
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mt-2 animate-in fade-in slide-in-from-bottom-4 duration-600">
-          Student Life & <span className="text-secondary">Activities.</span>
+          {title}
         </h1>
 
-        {/* Simple Supportive Tagline */}
+        {/* Supportive Tagline */}
         <p className="font-sans text-sm md:text-base text-slate-300 max-w-xl font-light leading-relaxed animate-in fade-in duration-700">
-          Stay updated with our upcoming academic tech expos, sport festivals,
-          parent open days, and vibrant school community milestones.
+          {subtitle}
         </p>
       </div>
     </section>
